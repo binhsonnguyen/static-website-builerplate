@@ -1,3 +1,5 @@
+import { f } from './f'
+
 QUnit.test('hello test', function (assert) {
-  assert.ok(1 == '1', 'Passed!')
+  assert.equal(f(), 'Hello world!', 'Passed!')
 })
