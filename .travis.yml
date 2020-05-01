@@ -7,12 +7,12 @@ before_script:
 
 jobs:
   include:
-    - stage: build
+    - name: build
       script:
         - npm install
         - npm run build
-    - stage: test
+    - name: test
       script: npm test
-    - stage: deploy
+    - name: deploy
       if: branch = master
       script: git push -f heroku HEAD:master
