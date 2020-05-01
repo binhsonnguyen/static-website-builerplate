@@ -13,6 +13,6 @@ jobs:
         - npm run build
     - stage: test
       script: npm test
-    - name: deploy
+    - stage: deploy
       if: branch = master
       script: git push -f heroku HEAD:master
