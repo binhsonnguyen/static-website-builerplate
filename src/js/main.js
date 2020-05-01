@@ -1,3 +1,1 @@
-function f () {
-
-}
+require('./f.js')
