@@ -1,1 +1,3 @@
-require('./f.js')
+import { f } from './f'
+
+f()
