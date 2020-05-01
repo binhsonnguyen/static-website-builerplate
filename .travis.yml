@@ -2,6 +2,17 @@ language: node_js
 node_js:
   - lts/*
 
-script:
-  - npm run build
-  - npm test
+before_script:
+  - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/demo-ci-draft.git
+
+stages:
+  - stage: build
+    script:
+      - npm install
+      - npm run build
+  - stage: test
+    script: npm test
+  - name: deploy
+    if: branch = master
+    script: git push -f heroku HEAD:master
+
