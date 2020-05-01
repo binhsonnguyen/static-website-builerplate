@@ -3,7 +3,7 @@ node_js:
   - lts/*
 
 before_script:
-  - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/demo-ci-draft.git
+  - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_KEY.git
 
 jobs:
   include:
